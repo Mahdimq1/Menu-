@@ -151,7 +151,8 @@ border-radius:25px;
 
 .food-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fill,minmax(260px,260px));
+justify-content:center;
 gap:30px;
 }
 
@@ -685,7 +686,8 @@ font-size:13px;
     
     <div style="
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(260px,260px));
+justify-content:center;
     gap:25px;
     ">
     
@@ -902,7 +904,7 @@ font-size:13px;
         
         if(text.includes(value)){
         
-        card.style.display="block";
+        card.style.removeProperty("display");
         
         }else{
         
@@ -930,13 +932,13 @@ font-size:13px;
         
         if(cat==="all"){
         
-        card.style.display="block";
+        card.style.removeProperty("display");
         
         }
         
         else if(card.dataset.category===cat){
         
-        card.style.display="block";
+        card.style.removeProperty("display");
         
         }
         
