@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Restaurant Premium Template</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Vazirmatn',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d0d0d;
+color:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+section{
+padding:80px 8%;
+}
+
+.container{
+width:100%;
+max-width:1400px;
+margin:auto;
+}
+
+header{
+position:fixed;
+top:0;
+right:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(18px);
+z-index:999;
+transition:.4s;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+color:#ffb300;
+letter-spacing:1px;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+font-size:16px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffb300;
+}
+
+.menu-btn{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content h1{
+font-size:70px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 45px;
+background:#ffb300;
+color:#000;
+font-weight:bold;
+border-radius:40px;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:scale(1.08);
+}
+
+.wave{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#ffb300;
+}
+
+.banner{
+padding:0;
+}
+
+.banner img{
+width:100%;
+border-radius:25px;
+}
+
+.food-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.food-card{
+background:#181818;
+border-radius:18px;
+overflow:hidden;
+transition:.4s;
+}
+
+.food-card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 30px rgba(255,179,0,.35);
+}
+
+.food-info{
+padding:20px;
+}
+
+.food-info h3{
+margin-bottom:10px;
+}
+
+.price{
+font-size:24px;
+color:#ffb300;
+margin-top:10px;
+font-weight:bold;
+}
+
+.order-btn{
+margin-top:15px;
+display:inline-block;
+background:#ffb300;
+color:#000;
+padding:10px 20px;
+border-radius:30px;
+font-weight:bold;
+}
+
+.search-box{
+max-width:650px;
+margin:0 auto 40px;
+display:flex;
+}
+
+.search-box input{
+width:100%;
+padding:16px;
+font-size:18px;
+border:none;
+outline:none;
+border-radius:50px;
+}
+
+.categories{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:40px;
+}
+
+.categories button{
+padding:12px 24px;
+background:#222;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:40px;
+transition:.3s;
+}
+
+.categories button:hover{
+background:#ffb300;
+color:#000;
+}
+
+.slider{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+}
+
+.slides{
+display:flex;
+transition:.5s;
+}
+
+.slide{
+min-width:100%;
+}
+
+.slide img{
+height:550px;
+object-fit:cover;
+width:100%;
+}
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#0009;
+padding:15px;
+cursor:pointer;
+font-size:28px;
+}
+
+.prev{
+right:15px;
+}
+
+.next{
+left:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Restaurant
+</div>
+
+<nav>
+
+<a href="#">خانه</a>
+<a href="#">منو</a>
+<a href="#">گالری</a>
+<a href="#">درباره ما</a>
+<a href="#">تماس</a>
+
+</nav>
+
+<div class="menu-btn">
+☰
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>طعم واقعی غذاهای خاص</h1>
+
+<p>
+بهترین تجربه غذایی با طراحی مدرن و منوی دیجیتال
+</p>
+
+<a href="#menu" class="hero-btn">
+مشاهده منو
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- Slider -->
+<!-- ========================= -->
+
+<section>
+
+    <div class="container">
+    
+    <h2 class="section-title">
+    گالری ویژه
+    </h2>
+    
+    <div class="slider">
+    
+    <div class="slides" id="slides">
+    
+    <div class="slide">
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80">
+    </div>
+    
+    <div class="slide">
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1600&q=80">
+    </div>
+    
+    <div class="slide">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=80">
+    </div>
+    
+    <div class="slide">
+    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1600&q=80">
+    </div>
+    
+    </div>
+    
+    <div class="prev" onclick="prevSlide()">
+    ❯
+    </div>
+    
+    <div class="next" onclick="nextSlide()">
+    ❮
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ========================= -->
+    <!-- Menu -->
+    <!-- ========================= -->
+    
+    <section id="menu">
+    
+    <div class="container">
+    
+    <h2 class="section-title">
+    منوی رستوران
+    </h2>
+    
+    <div class="search-box">
+    
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="جستجوی غذا...">
+    
+    </div>
+    
+    <div class="categories">
+    
+    <button data-category="all">
+    همه
+    </button>
+    
+    <button data-category="pizza">
+    پیتزا
+    </button>
+    
+    <button data-category="burger">
+    برگر
+    </button>
+    
+    <button data-category="pasta">
+    پاستا
+    </button>
+    
+    <button data-category="drink">
+    نوشیدنی
+    </button>
+    
+    <button data-category="dessert">
+    دسر
+    </button>
+    
+    </div>
+    
+    <div class="food-grid" id="foodGrid">
+    
+    <div class="food-card" data-category="pizza">
+    
+    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>پیتزا مخصوص</h3>
+    
+    <p>پنیر ایتالیایی، قارچ، گوشت، فلفل دلمه</p>
+    
+    <div class="price">
+    ۴۹۰ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card" data-category="burger">
+    
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>برگر ویژه</h3>
+    
+    <p>گوشت گریل، پنیر چدار، سیب زمینی</p>
+    
+    <div class="price">
+    ۳۷۵ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card" data-category="pasta">
+    
+    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>پاستا آلفردو</h3>
+    
+    <p>سس خامه، مرغ، قارچ، پنیر پارمزان</p>
+    
+    <div class="price">
+    ۳۲۰ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card" data-category="drink">
+    
+    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>موهیتو</h3>
+    
+    <p>لیمو، نعناع تازه، یخ</p>
+    
+    <div class="price">
+    ۹۵ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card" data-category="dessert">
+    
+    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>کیک شکلاتی</h3>
+    
+    <p>شکلات بلژیکی و خامه</p>
+    
+    <div class="price">
+    ۱۴۰ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card" data-category="pizza">
+    
+    <img src="https://images.unsplash.com/photo-1548365328-9f547fb0953b?auto=format&fit=crop&w=900&q=80">
+    
+    <div class="food-info">
+    
+    <h3>پیتزا پپرونی</h3>
+    
+    <p>پپرونی، پنیر موزارلا، زیتون</p>
+    
+    <div class="price">
+    ۴۶۰ هزار تومان
+    </div>
+    
+    <a href="#" class="order-btn">
+    سفارش
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+
+
+    <!-- ========================= -->
+<!-- About Restaurant -->
+<!-- ========================= -->
+
+<section id="about">
+
+    <div class="container">
+    
+    <h2 class="section-title">
+    درباره رستوران
+    </h2>
+    
+    <div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:40px;
+    align-items:center;
+    ">
+    
+    <div>
+    
+    <img
+    style="border-radius:20px;"
+    src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1200&q=80">
+    
+    </div>
+    
+    <div>
+    
+    <h2 style="margin-bottom:20px;font-size:38px;color:#ffb300;">
+    رستوران Premium
+    </h2>
+    
+    <p style="
+    line-height:2;
+    font-size:18px;
+    color:#ddd;
+    ">
+    
+    با بیش از ۱۵ سال تجربه در صنعت غذا، بهترین کیفیت،
+    تازه‌ترین مواد اولیه و محیطی لوکس را برای مهمانان
+    خود فراهم کرده‌ایم.
+    
+    </p>
+    
+    <br>
+    
+    <p style="
+    line-height:2;
+    font-size:18px;
+    color:#ddd;
+    ">
+    
+    تمام غذاها با مواد اولیه تازه تهیه شده و با
+    بالاترین استانداردهای بهداشتی سرو می‌شوند.
+    
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ========================= -->
+    <!-- QR -->
+    <!-- ========================= -->
+    
+    <section>
+    
+    <div class="container">
+    
+    <h2 class="section-title">
+    منوی دیجیتال
+    </h2>
+    
+    <div style="
+    display:flex;
+    justify-content:center;
+    ">
+    
+    <img
+    style="
+    width:250px;
+    background:white;
+    padding:15px;
+    border-radius:20px;
+    "
+    src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://example.com">
+    
+    </div>
+    
+    <p style="
+    text-align:center;
+    margin-top:20px;
+    color:#ccc;
+    font-size:18px;
+    ">
+    
+    با اسکن QR منوی دیجیتال را مشاهده کنید.
+    
+    </p>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ========================= -->
+    <!-- Contact -->
+    <!-- ========================= -->
+    
+    <section id="contact">
+    
+    <div class="container">
+    
+    <h2 class="section-title">
+    ارتباط با ما
+    </h2>
+    
+    <div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    ">
+    
+    <div class="food-card">
+    
+    <div class="food-info">
+    
+    <h3>
+    📞 تماس
+    </h3>
+    
+    <p>
+    
+    021-12345678
+    
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card">
+    
+    <div class="food-info">
+    
+    <h3>
+    📱 واتساپ
+    </h3>
+    
+    <p>
+    
+    09123456789
+    
+    </p>
+    
+    <a
+    class="order-btn"
+    href="https://wa.me/989123456789"
+    target="_blank">
+    
+    ارسال پیام
+    
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    <div class="food-card">
+    
+    <div class="food-info">
+    
+    <h3>
+    📍 آدرس
+    </h3>
+    
+    <p>
+    
+    تهران، خیابان نمونه، پلاک ۱۲
+    
+    </p>
+    
+    <a
+    class="order-btn"
+    target="_blank"
+    href="https://maps.google.com">
+    
+    مسیریابی
+    
+    </a>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    <!-- ========================= -->
+    <!-- Footer -->
+    <!-- ========================= -->
+    
+    <footer style="
+    background:#111;
+    padding:60px 8%;
+    text-align:center;
+    border-top:1px solid #333;
+    ">
+    
+    <h2 style="
+    color:#ffb300;
+    margin-bottom:20px;
+    ">
+    
+    Restaurant Premium
+    
+    </h2>
+    
+    <p style="
+    color:#aaa;
+    line-height:2;
+    ">
+    
+    تمامی حقوق این قالب محفوظ است.
+    
+    </p>
+    
+    <br>
+    
+    <div style="
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    ">
+    
+    <a href="#">
+    اینستاگرام
+    </a>
+    
+    <a href="#">
+    تلگرام
+    </a>
+    
+    <a href="#">
+    واتساپ
+    </a>
+    
+    <a href="#">
+    تماس
+    </a>
+    
+    </div>
+    
+    <br>
+    
+    <p style="color:#666;">
+    
+    © 2026 Restaurant Premium
+    
+    </p>
+    
+    </footer>
+
+
+    <script>
+
+        //=========================
+        // Auto Slider
+        //=========================
+        
+        let currentSlide = 0;
+        
+        const slides = document.getElementById("slides");
+        
+        const totalSlides = document.querySelectorAll(".slide").length;
+        
+        function showSlide(index){
+        
+        if(index>=totalSlides){
+        
+        currentSlide=0;
+        
+        }
+        
+        else if(index<0){
+        
+        currentSlide=totalSlides-1;
+        
+        }
+        
+        else{
+        
+        currentSlide=index;
+        
+        }
+        
+        slides.style.transform="translateX("+(-currentSlide*100)+"%)";
+        
+        }
+        
+        function nextSlide(){
+        
+        showSlide(currentSlide+1);
+        
+        }
+        
+        function prevSlide(){
+        
+        showSlide(currentSlide-1);
+        
+        }
+        
+        setInterval(nextSlide,4000);
+        
+        //=========================
+        // Search
+        //=========================
+        
+        const searchInput=document.getElementById("searchInput");
+        
+        const cards=document.querySelectorAll(".food-card");
+        
+        searchInput.addEventListener("keyup",function(){
+        
+        let value=this.value.toLowerCase();
+        
+        cards.forEach(card=>{
+        
+        let text=card.innerText.toLowerCase();
+        
+        if(text.includes(value)){
+        
+        card.style.display="block";
+        
+        }else{
+        
+        card.style.display="none";
+        
+        }
+        
+        });
+        
+        });
+        
+        //=========================
+        // Categories
+        //=========================
+        
+        const buttons=document.querySelectorAll(".categories button");
+        
+        buttons.forEach(btn=>{
+        
+        btn.onclick=function(){
+        
+        const cat=this.dataset.category;
+        
+        cards.forEach(card=>{
+        
+        if(cat==="all"){
+        
+        card.style.display="block";
+        
+        }
+        
+        else if(card.dataset.category===cat){
+        
+        card.style.display="block";
+        
+        }
+        
+        else{
+        
+        card.style.display="none";
+        
+        }
+        
+        });
+        
+        };
+        
+        });
+        
+        //=========================
+        // Mobile Menu
+        //=========================
+        
+        const menuBtn=document.querySelector(".menu-btn");
+        
+        const nav=document.querySelector("nav");
+        
+        menuBtn.onclick=function(){
+        
+        nav.classList.toggle("active");
+        
+        };
+        
+        //=========================
+        // Header Effect
+        //=========================
+        
+        window.addEventListener("scroll",()=>{
+        
+        const header=document.querySelector("header");
+        
+        if(window.scrollY>60){
+        
+        header.style.background="#000";
+        
+        header.style.padding="12px 8%";
+        
+        }else{
+        
+        header.style.background="rgba(0,0,0,.75)";
+        
+        header.style.padding="18px 8%";
+        
+        }
+        
+        });
+        
+        //=========================
+        // Scroll Animation
+        //=========================
+        
+        const observer=new IntersectionObserver(entries=>{
+        
+        entries.forEach(entry=>{
+        
+        if(entry.isIntersecting){
+        
+        entry.target.animate([
+        
+        {
+        
+        opacity:0,
+        
+        transform:"translateY(40px)"
+        
+        },
+        
+        {
+        
+        opacity:1,
+        
+        transform:"translateY(0)"
+        
+        }
+        
+        ],{
+        
+        duration:700,
+        
+        fill:"forwards"
+        
+        });
+        
+        }
+        
+        });
+        
+        });
+        
+        document.querySelectorAll("section").forEach(sec=>{
+        
+        observer.observe(sec);
+        
+        });
+        
+        //=========================
+        // Back To Top Button
+        //=========================
+        
+        const topBtn=document.createElement("button");
+        
+        topBtn.innerHTML="↑";
+        
+        topBtn.style.position="fixed";
+        
+        topBtn.style.bottom="30px";
+        
+        topBtn.style.left="30px";
+        
+        topBtn.style.width="55px";
+        
+        topBtn.style.height="55px";
+        
+        topBtn.style.borderRadius="50%";
+        
+        topBtn.style.border="none";
+        
+        topBtn.style.background="#ffb300";
+        
+        topBtn.style.color="#000";
+        
+        topBtn.style.fontSize="24px";
+        
+        topBtn.style.cursor="pointer";
+        
+        topBtn.style.display="none";
+        
+        topBtn.style.zIndex="999";
+        
+        document.body.appendChild(topBtn);
+        
+        window.addEventListener("scroll",()=>{
+        
+        if(window.scrollY>300){
+        
+        topBtn.style.display="block";
+        
+        }else{
+        
+        topBtn.style.display="none";
+        
+        }
+        
+        });
+        
+        topBtn.onclick=()=>{
+        
+        window.scrollTo({
+        
+        top:0,
+        
+        behavior:"smooth"
+        
+        });
+        
+        };
+        
+        </script>
+        
+        </body>
+        
+        </html>
